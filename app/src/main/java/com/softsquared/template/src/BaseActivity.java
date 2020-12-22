@@ -2,8 +2,10 @@ package com.softsquared.template.src;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.softsquared.template.R;
@@ -11,6 +13,15 @@ import com.softsquared.template.R;
 @SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {
     public ProgressDialog mProgressDialog;
+
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
+        //상단 바를 블랙으로 ... 코드를
+    }
 
     public void showCustomToast(final String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
